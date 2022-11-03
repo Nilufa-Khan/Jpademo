@@ -34,6 +34,7 @@ public class UserController {
         return new ResponseEntity<>(userService.deleteUserById(userId), HttpStatus.OK);
     }
 
+
     @GetMapping("searchUser/{firstName}")
     public ResponseEntity<?> fetchByFirstName(@PathVariable String firstName){
      return new ResponseEntity<>(userService.getUserByFirstName(firstName),HttpStatus.FOUND);
